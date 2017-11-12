@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="VPN," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="没事看看">
-<meta property="og:type" content="website">
-<meta property="og:title" content="回收站">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
+<meta name="keywords" content="VPN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS&#x2F;Ubuntu一键安装IPSEC&#x2F;IKEV2 VPN服务器">
+<meta property="og:url" content="http://yoursite.com/2017/11/12/cross-gfw/index.html">
 <meta property="og:site_name" content="回收站">
-<meta property="og:description" content="没事看看">
+<meta property="og:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-12T11:42:18.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回收站">
-<meta name="twitter:description" content="没事看看">
+<meta name="twitter:title" content="CentOS&#x2F;Ubuntu一键安装IPSEC&#x2F;IKEV2 VPN服务器">
+<meta name="twitter:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/12/cross-gfw/"/>
 
 
 
 
 
-  <title>回收站</title>
+  <title>CentOS/Ubuntu一键安装IPSEC/IKEV2 VPN服务器 | 回收站</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/12/cross-gfw/" itemprop="url">CentOS/Ubuntu一键安装IPSEC/IKEV2 VPN服务器</a></h1>
+          <h1 class="post-title" itemprop="name headline">CentOS/Ubuntu一键安装IPSEC/IKEV2 VPN服务器</h1>
         
 
         <div class="post-meta">
@@ -353,9 +352,7 @@
       
 
       
-        
-          
-            <p>详细内容查看：</p>
+        <p>详细内容查看：</p>
 <blockquote>
 <p><a href="https://quericy.me/blog/699/" target="_blank" rel="external">https://quericy.me/blog/699/</a></p>
 </blockquote>
@@ -374,8 +371,6 @@
 
 <p>拷贝客户端证书：<br>mkdir /var/www/html/key<br>cp -p ca.cert.pem  /var/www/html/key/<br>cp -p client.cert.p12  /var/www/html/key/<br>重启服务，service httpd restart<br>然后就可以在客户端访问：<a href="http://****/key" target="_blank" rel="external">http://****/key</a> 下载证书。</p>
 
-          
-        
       
     </div>
     
@@ -390,142 +385,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/26/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Daniel deng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="回收站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/26/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-26T22:26:51+08:00">
-                2017-10-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/VPN/" rel="tag"># VPN</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -535,10 +424,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -546,6 +436,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -787,6 +681,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
