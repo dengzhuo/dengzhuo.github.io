@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
+<meta name="description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：  yum install httpd Cy  配置apache登录用户：  htpasswd -c -b /etc/ht">
 <meta name="keywords" content="VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS&#x2F;Ubuntu一键安装IPSEC&#x2F;IKEV2 VPN服务器">
 <meta property="og:url" content="http://yoursite.com/2017/11/12/cross-gfw/index.html">
 <meta property="og:site_name" content="回收站">
-<meta property="og:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
+<meta property="og:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：  yum install httpd Cy  配置apache登录用户：  htpasswd -c -b /etc/ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-12T11:42:18.799Z">
+<meta property="og:updated_time" content="2017-11-12T11:48:28.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS&#x2F;Ubuntu一键安装IPSEC&#x2F;IKEV2 VPN服务器">
-<meta name="twitter:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：yum install httpd Cy 配置apache登录用户：htpasswd -c -b /etc/httpd/h">
+<meta name="twitter:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：  yum install httpd Cy  配置apache登录用户：  htpasswd -c -b /etc/ht">
 
 
 
@@ -364,12 +364,30 @@
 </blockquote>
 <p>linode服务器不支持安装内核，需要再后台配置内核</p>
 <p>再安装VPN</p>
-<p>安装apache：<br>yum install httpd Cy</p>
-<p>配置apache登录用户：<br>htpasswd -c -b /etc/httpd/htpasdb  zhanghao mima</p>
+<p>安装apache：</p>
+<blockquote>
+<p>yum install httpd Cy</p>
+</blockquote>
+<p>配置apache登录用户：</p>
+<blockquote>
+<p>htpasswd -c -b /etc/httpd/htpasdb  zhanghao mima</p>
+</blockquote>
 <p>在apache配置文件/etc/httpd/conf/httpd.conf最后追加：</p>
-<directory><br>options indexes<br>AuthType Basic<br>AuthName “!!!”<br>AuthBasicProvider file<br>AuthUserFile /etc/httpd/htpasdb<br>Require user zhanghao<br></directory>
-
-<p>拷贝客户端证书：<br>mkdir /var/www/html/key<br>cp -p ca.cert.pem  /var/www/html/key/<br>cp -p client.cert.p12  /var/www/html/key/<br>重启服务，service httpd restart<br>然后就可以在客户端访问：<a href="http://****/key" target="_blank" rel="external">http://****/key</a> 下载证书。</p>
+<pre><code>&lt;directory /&gt;
+options indexes
+AuthType Basic
+AuthName &quot;!!!&quot;
+AuthBasicProvider file
+AuthUserFile /etc/httpd/htpasdb
+Require user zhanghao
+&lt;/directory&gt;
+</code></pre><p>拷贝客户端证书：</p>
+<blockquote>
+<p>mkdir /var/www/html/key</p>
+<p>cp -p ca.cert.pem  /var/www/html/key/</p>
+<p>cp -p client.cert.p12  /var/www/html/key/</p>
+</blockquote>
+<p>重启服务，service httpd restart<br>然后就可以在客户端访问：<a href="http://****/key" target="_blank" rel="external">http://****/key</a> 下载证书。</p>
 
       
     </div>

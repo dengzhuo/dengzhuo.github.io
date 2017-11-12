@@ -367,12 +367,30 @@
 </blockquote>
 <p>linode服务器不支持安装内核，需要再后台配置内核</p>
 <p>再安装VPN</p>
-<p>安装apache：<br>yum install httpd Cy</p>
-<p>配置apache登录用户：<br>htpasswd -c -b /etc/httpd/htpasdb  zhanghao mima</p>
+<p>安装apache：</p>
+<blockquote>
+<p>yum install httpd Cy</p>
+</blockquote>
+<p>配置apache登录用户：</p>
+<blockquote>
+<p>htpasswd -c -b /etc/httpd/htpasdb  zhanghao mima</p>
+</blockquote>
 <p>在apache配置文件/etc/httpd/conf/httpd.conf最后追加：</p>
-<directory><br>options indexes<br>AuthType Basic<br>AuthName “!!!”<br>AuthBasicProvider file<br>AuthUserFile /etc/httpd/htpasdb<br>Require user zhanghao<br></directory>
-
-<p>拷贝客户端证书：<br>mkdir /var/www/html/key<br>cp -p ca.cert.pem  /var/www/html/key/<br>cp -p client.cert.p12  /var/www/html/key/<br>重启服务，service httpd restart<br>然后就可以在客户端访问：<a href="http://****/key" target="_blank" rel="external">http://****/key</a> 下载证书。</p>
+<pre><code>&lt;directory /&gt;
+options indexes
+AuthType Basic
+AuthName &quot;!!!&quot;
+AuthBasicProvider file
+AuthUserFile /etc/httpd/htpasdb
+Require user zhanghao
+&lt;/directory&gt;
+</code></pre><p>拷贝客户端证书：</p>
+<blockquote>
+<p>mkdir /var/www/html/key</p>
+<p>cp -p ca.cert.pem  /var/www/html/key/</p>
+<p>cp -p client.cert.p12  /var/www/html/key/</p>
+</blockquote>
+<p>重启服务，service httpd restart<br>然后就可以在客户端访问：<a href="http://****/key" target="_blank" rel="external">http://****/key</a> 下载证书。</p>
 
           
         
