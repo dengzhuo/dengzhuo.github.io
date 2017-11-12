@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="回收站">
 <meta property="og:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：  yum install httpd Cy  配置apache登录用户：  htpasswd -c -b /etc/ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-12T11:48:28.038Z">
+<meta property="og:updated_time" content="2017-11-12T11:56:53.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS&#x2F;Ubuntu一键安装IPSEC&#x2F;IKEV2 VPN服务器">
 <meta name="twitter:description" content="详细内容查看：  https://quericy.me/blog/699/  包括搭建方法 流程： 先安装加速器参照  https://www.xiaoz.me/archives/7973  linode服务器不支持安装内核，需要再后台配置内核 再安装VPN 安装apache：  yum install httpd Cy  配置apache登录用户：  htpasswd -c -b /etc/ht">
@@ -373,15 +373,8 @@
 <p>htpasswd -c -b /etc/httpd/htpasdb  zhanghao mima</p>
 </blockquote>
 <p>在apache配置文件/etc/httpd/conf/httpd.conf最后追加：</p>
-<pre><code>&lt;directory /&gt;
-options indexes
-AuthType Basic
-AuthName &quot;!!!&quot;
-AuthBasicProvider file
-AuthUserFile /etc/httpd/htpasdb
-Require user zhanghao
-&lt;/directory&gt;
-</code></pre><p>拷贝客户端证书：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">directory</span> /&gt;</span></div><div class="line">options indexes</div><div class="line">AuthType Basic</div><div class="line">AuthName "!!!"</div><div class="line">AuthBasicProvider file</div><div class="line">AuthUserFile /etc/httpd/htpasdb</div><div class="line">Require user zhanghao</div><div class="line"><span class="tag">&lt;/<span class="name">directory</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>拷贝客户端证书：</p>
 <blockquote>
 <p>mkdir /var/www/html/key</p>
 <p>cp -p ca.cert.pem  /var/www/html/key/</p>
